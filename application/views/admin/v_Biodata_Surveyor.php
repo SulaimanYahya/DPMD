@@ -11,43 +11,62 @@
 					Pedoman ini berisi tetang pertanyaan yang diisi oleh pemerintah desa atau tim pelaksana kegiatan yang hasilnya dijaikan bahan atau dasar penyusunan kebijakan teknis pelaksanaan program digahun 2024.</p>
 			</label>
 			<h5><strong><?= $this->session->flashdata('msg') ?></strong></h5>
-			<div class="card">
-				<div class="card-body">
-					<div class="row">
-						<div class="col-6">
-							<div class="form-group">
-								<label for="kd_kec">Kecamatan</label>
-								<input type="text" value="<?= masterGetId('kecamatan', 'dt_kecamatan', 'id_kec', $kd_kec) ?>" class="form-control" name="kd_kec" id="kd_kec" readonly>
+			<form action="<?= base_url('Biodata/insert') ?>" method="POST">
+				<div class="card">
+					<div class="card-body">
+						<div class="row float-right">
+							<div class="col-6">
+								<div class="form-group">
+									<label for="kd_kec">Kecamatan</label>
+									<input type="text" value="<?= masterGetId('kecamatan', 'dt_kecamatan', 'id_kec', $kd_kec) ?>" class="form-control" name="kd_kec" id="kd_kec" readonly>
+								</div>
+								<div class="form-group">
+									<label for="nama">Nama Lengkap</label>
+									<input type="text" class="form-control" name="nama" id="nama" value="<?= $biodata['nama'] ?>">
+								</div>
+								<div class="form-group">
+									<label for="jabatan">Jabatan</label>
+									<input type="text" class="form-control" name="jabatan" id="jabatan" value="<?= $biodata['jabatan'] ?>">
+								</div>
 							</div>
-							<div class="form-group">
-								<label for="nama">Nama</label>
-								<input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Lengkap">
+							<div class="col-6">
+								<div class="form-group">
+									<label for="kd_desa">Desa</label>
+									<input type="text" value="<?= masterGetId('desa', 'dt_desa', 'id_desa', $kd_desa) ?>" class="form-control" name="kd_desa" id="kd_desa" readonly>
+								</div>
+								<div class="form-group">
+									<label for="Jenkel">Jenkel</label>
+									<select class="form-control form-control-sm" style="padding-bottom: 27px;" name="jenkel" id="jenkel">
+										<?php if ($biodata['jenkel'] == 'Laki-laki') {
+											echo "
+											<option value=''>-Pilih-</option>
+											<option value='Laki-laki' selected>Laki - laki</option>
+											<option value='Perempuan'>Perempuan</option>
+											";
+										} elseif ($biodata['jenkel'] == 'Perempuan') {
+											echo "
+											<option value=''>-Pilih-</option>
+											<option value='Laki-laki'>Laki - laki</option>
+											<option value='Perempuan' selected>Perempuan</option>
+											";
+										} else {
+											echo "
+											<option value='' selected>-Pilih-</option>
+											<option value='Laki-laki'>Laki - laki</option>
+											<option value='Perempuan'>Perempuan</option>
+											";
+										} ?>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="nohp">Nomor Handphone</label>
+									<input type="text" class="form-control" name="nohp" id="nohp" value="<?= $biodata['nohp'] ?>">
+								</div>
 							</div>
-							<div class="form-group">
-								<label for="jabatan">Jabatan</label>
-								<input type="text" class="form-control" name="jabatan" id="jabatan" placeholder="Jabatan Aparat Desa">
-							</div>
-						</div>
-						<div class="col-6">
-							<div class="form-group">
-								<label for="kd_desa">Desa</label>
-								<input type="text" value="<?= masterGetId('desa', 'dt_desa', 'id_desa', $kd_desa) ?>" class="form-control" name="kd_desa" id="kd_desa" readonly>
-							</div>
-							<div class="form-group">
-								<label for="Jenkel">Jenkel</label>
-								<select class="form-control form-control-sm" style="padding-bottom: 27px;" name="jenkel" id="jenkel">
-									<option value="">-Pilih-</option>
-									<option value="Laki-laki">Laki - laki</option>
-									<option value="Perempuan">Perempuan</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="nohp">Nomor Handphone</label>
-								<input type="text" class="form-control" name="nohp" id="nohp" placeholder="08xxxxx">
-							</div>
+							<button type="submit" class="btn btn-primary text-light">Simpan</button>
 						</div>
 					</div>
 				</div>
-			</div>
+			</form>
 		</div>
 	</div>
