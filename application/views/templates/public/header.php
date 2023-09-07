@@ -111,11 +111,6 @@
 													<i class="fa-solid fa-file-pdf"></i> Doc
 												</a>
 											</li>
-											<li class="nav-item">
-												<a class="nav-link" href="<?= base_url('SKP') ?>">
-													<i class="fa-solid fa-square-poll-vertical"></i> Survey
-												</a>
-											</li>
 										</ul>
 									</div>
 								</div>
