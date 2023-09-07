@@ -39,7 +39,8 @@ class SKP extends CI_Controller
 		$kecamatan = masterGetId('kecamatan', 'dt_kecamatan', 'id_kec', $kd_kec);
 		// var_dump($data);
 		// die();
-		error_reporting(0); // AGAR ERROR MASALAH VERSI PHP TIDAK MUNCUL
+		date_default_timezone_set('Asia/Jakarta');
+		// error_reporting(0); // AGAR ERROR MASALAH VERSI PHP TIDAK MUNCUL
 		$pdf = new FPDF('P', 'mm', 'Letter');
 		$pdf->AddPage();
 		$pdf->Image(base_url('uploads/BonBol.jpg'), 10, 6, 20);
