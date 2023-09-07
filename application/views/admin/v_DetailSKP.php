@@ -34,10 +34,14 @@
 						<select class="form-control form-control-sm" disabled>
 							<option value=""><?= $r->A1 ?></option>
 						</select>
+						Foto:
+						<img src="<?= base_url('uploads/' . $r->foto_A1) ?>" alt="" width="100px"><br>
 						<label for="A2" class="mt-2"><b>2. Dokumen RKPDes Tahun 2023 memuat kegitan ketahanan pangan secara rinci.</b></label>
 						<select class="form-control form-control-sm" disabled>
 							<option value=""><?= $r->A2 ?></option>
 						</select>
+						Foto:
+						<img src="<?= base_url('uploads/' . $r->foto_A2) ?>" alt="" width="100px"><br>
 						<!-- Foto -->
 						<label for="A3" class="mt-2"><b>3. Terdapat surat Keputusan kepala desa tentang, daftar sasaran/pekerja pada kegiatan ketahahan pangan.</b></label>
 						<select class="form-control form-control-sm" disabled>

@@ -31,6 +31,8 @@ class TambahSKP extends CI_Controller
 		$config['allowed_types']        = 'png|jpeg|jpg|png';
 		$config['max_size']             = '4050';
 
+		$foto_A1 = $_FILES['foto_A1']['name'];
+		$foto_A2 = $_FILES['foto_A2']['name'];
 		$foto_A3 = $_FILES['foto_A3']['name'];
 		$foto_B1 = $_FILES['foto_B1']['name'];
 		$foto_B2 = $_FILES['foto_B2']['name'];
@@ -46,6 +48,8 @@ class TambahSKP extends CI_Controller
 		$this->load->library('upload', $config);
 		$this->upload->initialize($config);
 
+		$this->upload->do_upload('foto_A1');
+		$this->upload->do_upload('foto_A2');
 		$this->upload->do_upload('foto_A3');
 		$this->upload->do_upload('foto_B1');
 		$this->upload->do_upload('foto_B2');
@@ -80,6 +84,8 @@ class TambahSKP extends CI_Controller
 			'C1' 		 	 => $this->input->post('C1'),
 			'C2' 		 	 => $this->input->post('C2'),
 			'C3' 		 	 => $this->input->post('C3'),
+			'foto_A1' 		 => $foto_A1,
+			'foto_A2' 		 => $foto_A2,
 			'foto_A3' 		 => $foto_A3,
 			'foto_B1' 		 => $foto_B1,
 			'foto_B2' 		 => $foto_B2,

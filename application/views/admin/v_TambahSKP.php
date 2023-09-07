@@ -53,12 +53,16 @@
 						<option value="TIDAK ADA">TIDAK ADA</option>
 						<option value="LAINNYA">LAINNYA</option>
 					</select>
+					Foto:
+					<input type="file" class="form-control form-control-sm w-25" name="foto_A1">
 					<label for="A2" class="mt-2"><b>2. Dokumen RKPDes Tahun 2023 memuat kegitan ketahanan pangan secara rinci.</b></label>
 					<select name="A2" id="A2" class="form-control form-control-sm" required>
 						<option value="ADA">ADA</option>
 						<option value="TIDAK ADA">TIDAK ADA</option>
 						<option value="LAINNYA">LAINNYA</option>
 					</select>
+					Foto:
+					<input type="file" class="form-control form-control-sm w-25" name="foto_A2">
 					<!-- Foto -->
 					<label for="A3" class="mt-2"><b>3. Terdapat surat Keputusan kepala desa tentang, daftar sasaran/pekerja pada kegiatan ketahahan pangan.</b></label>
 					<select name="A3" id="A3" class="form-control form-control-sm" required>
