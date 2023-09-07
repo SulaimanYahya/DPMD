@@ -6,7 +6,6 @@ class Admin extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		// $this->load->model('M_Data_Wilayah', 'm_kec');
 		if (!$this->session->userdata('name')) {
 			redirect('Auth');
 		}
@@ -17,7 +16,6 @@ class Admin extends CI_Controller
 			'title'    => 'Dashboard',
 			'username' => $this->session->userdata('name'),
 		];
-
 		$this->template->admin('admin/v_Admin', $data);
 	}
 }

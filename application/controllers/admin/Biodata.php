@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class SKP extends CI_Controller
+class Biodata extends CI_Controller
 {
 	public function __construct()
 	{
@@ -13,11 +13,14 @@ class SKP extends CI_Controller
 	public function index()
 	{
 		$data = [
-			'dt_kec'  => $this->m_wilayah->getDatawilayah('dt_kecamatan', 'kecamatan'),
-			'dt_desa' => $this->m_wilayah->getDatawilayah('dt_desa', 'kd_camat'),
-			'dt_skp'  => $this->db->get('dt_skp')->result(),
+			'title'   => 'Biodata Surveyor',
+			'biodata'  => $this->db->get_where('dt_biodata_surveyor', ([
+				'kd_desa' => $this->session->userdata('kd_desa')
+			]))->row_array(),
+			'kd_kec' 	=> $this->session->userdata('kd_kec'),
+			'kd_desa'   => $this->session->userdata('kd_desa'),
 		];
-		$this->template->load('publik/v_SKP', $data);
+		$this->template->admin('admin/v_Biodata_Surveyor', $data);
 	}
 
 	function detail($id)

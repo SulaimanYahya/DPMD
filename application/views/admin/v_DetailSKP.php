@@ -1,31 +1,24 @@
-<div class="content-wrapper">
-	<div class="container">
+<div class="main-panel">
+	<div class="content-wrapper">
 		<div class="col-8 offset-2" style="margin-top: -30px;">
-			<h3 class="text-center text-bold"><u>SURVEY KINERJA PELAKSANAAN PROGRAM KETAHANAN PANGAN</u></h3>
-			<a href="<?= base_url('SKP') ?>" class="btn btn-sm btn-danger">Kembali</a>
+			<h3 class="text-center text-bold mt-3"><u>DETAIL SURVEY YANG SUDAH DI INPUT</u></h3>
 			<h5><strong><?= $this->session->flashdata('msg') ?></strong></h5>
 			<?php foreach ($dt_skp as $r) : ?>
 				<div class="form-group">
 					<label for="kecamatan">Kecamatan</label>
-					<select class="form-control form-control-sm" disabled>
-						<option value=""><?= $r->kecamatan ?></option>
-					</select>
+					<input type="text" class="form-control" value="<?= masterGetId('kecamatan', 'dt_kecamatan', 'id_kec', $r->kd_kec) ?>" disabled>
 				</div>
 				<div class="form-group">
 					<label for="desa">Desa</label>
-					<select class="form-control form-control-sm" disabled>
-						<option value=""><?= $r->desa ?></option>
-					</select>
+					<input type="text" class="form-control" value="<?= masterGetId('desa', 'dt_desa', 'id_desa', $r->kd_desa) ?>" disabled>
 				</div>
 				<div class="form-group">
 					<label for="jenis_kegiatan">Jenis Kegiatan</label>
-					<select class="form-control form-control-sm" disabled>
-						<option value=""><?= $r->jenis_kegiatan ?></option>
-					</select>
+					<input type="text" class="form-control" value="<?= $r->jenis_kegiatan ?>" disabled>
 				</div>
 				<div class="form-group">
 					<label for="subkegiatan">Sub Kegiatan</label>
-					<input type="text" class="form-control" placeholder="Sub Kegiatan" disabled>
+					<input type="text" class="form-control" value="<?= $r->sub_kegiatan ?>" disabled>
 				</div>
 				<div class="form-group">
 					<label for="tahun">Tahun</label>
@@ -148,4 +141,3 @@
 			<?php endforeach; ?>
 		</div>
 	</div>
-</div>

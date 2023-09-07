@@ -112,8 +112,8 @@
 												</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link" href="pages/politics.html">
-													<i class="fa-solid fa-images"></i> Galery
+												<a class="nav-link" href="<?= base_url('SKP') ?>">
+													<i class="fa-solid fa-square-poll-vertical"></i> Survey
 												</a>
 											</li>
 										</ul>

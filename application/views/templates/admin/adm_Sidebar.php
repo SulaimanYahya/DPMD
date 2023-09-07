@@ -14,6 +14,7 @@
                             FROM `user_menu` JOIN `user_access_menu`
                               ON `user_menu`.`id` = `user_access_menu`.`menu_id`
                            WHERE `user_access_menu`.`role_id` = $role_id
+						     AND `user_menu`.is_active = 1
                         ORDER BY `user_access_menu`.`menu_id` ASC
                         ";
 			$menu = $this->db->query($queryMenu)->result_array();

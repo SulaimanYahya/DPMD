@@ -6,6 +6,9 @@ class TambahSKP extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+		if (!$this->session->userdata('name')) {
+			redirect('Auth');
+		}
 		$this->load->model('M_Data_Wilayah', 'm_wilayah');
 		$this->load->model('M_SKP', 'm_skp');
 	}
@@ -13,11 +16,12 @@ class TambahSKP extends CI_Controller
 	public function index()
 	{
 		$data = [
-			'dt_kec'    => $this->m_wilayah->getDatawilayah('dt_kecamatan', 'kecamatan'),
-			'dt_desa'   => $this->m_wilayah->getDatawilayah('dt_desa', 'kd_camat'),
+			'title'		=> 'Input SKP',
+			'kd_kec' 	=> $this->session->userdata('kd_kec'),
+			'kd_desa'   => $this->session->userdata('kd_desa'),
 		];
 
-		$this->template->load('publik/v_TambahSKP', $data);
+		$this->template->admin('admin/v_TambahSKP', $data);
 	}
 
 	public function insert()
@@ -55,8 +59,8 @@ class TambahSKP extends CI_Controller
 		$this->upload->do_upload('foto_C3');
 
 		$data = [
-			'kecamatan' 	 => masterGetId('kecamatan', 'dt_kecamatan', 'id_kec', $this->input->post('kecamatan')),
-			'desa' 			 => masterGetId('desa', 'dt_desa', 'id_desa', $this->input->post('desa')),
+			'kd_kec' 	 	 => $this->input->post('kd_kec'),
+			'kd_desa' 		 => $this->input->post('kd_desa'),
 			'jenis_kegiatan' => $this->input->post('jenis_kegiatan'),
 			'sub_kegiatan' 	 => $this->input->post('subkegiatan'),
 			'tahun' 		 => $this->input->post('tahun'),

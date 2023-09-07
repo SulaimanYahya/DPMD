@@ -40,17 +40,15 @@ class Auth extends CI_Controller
 			// jika usernya aktif
 			if ($user['is_active'] == 1) {
 				// cek password
-				if (password_verify($password, $user['password'])) {
+				if ($password == $user['password']) {
 					$data = [
-						'name' => $user['name'],
-						'role_id' => $user['role_id']
+						'name' 	  => $user['name'],
+						'role_id' => $user['role_id'],
+						'kd_desa' => $user['kd_desa'],
+						'kd_kec'  => $user['kd_kec']
 					];
 					$this->session->set_userdata($data);
-					if ($user['role_id'] == 1) {
-						redirect('Admin');
-					} else {
-						redirect('User');
-					}
+					redirect('Admin');
 				} else {
 					$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong password!</div>');
 					redirect('Auth');
@@ -195,6 +193,8 @@ class Auth extends CI_Controller
 		// $this->session->unset_userdata('email');
 		$this->session->unset_userdata('name');
 		$this->session->unset_userdata('role_id');
+		$this->session->unset_userdata('kd_kec');
+		$this->session->unset_userdata('kd_desa');
 
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">You have been logged out!</div>');
 		redirect('auth');

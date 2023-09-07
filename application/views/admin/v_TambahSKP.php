@@ -1,50 +1,47 @@
-<div class="content-wrapper">
-	<div class="container">
+<div class="main-panel">
+	<div class="content-wrapper text-black">
 		<div class="col-8 offset-2" style="margin-top: -30px;">
-			<h3 class="text-center text-bold"><u>SURVEY KINERJA PELAKSANAAN PROGRAM KETAHANAN PANGAN</u></h3>
-			<a href="<?= base_url('SKP') ?>" class="btn btn-sm btn-danger">Kembali</a>
+			<h4 class="text-center text-bold mt-4"><u>SURVEY KINERJA PELAKSANAAN (SKP) <br>PROGRAM KETAHANAN PANGAN</u></h4>
+			<br>
 			<h5><strong><?= $this->session->flashdata('msg') ?></strong></h5>
-			<?= form_open_multipart('TambahSKP/insert') ?>
-			<div class="form-group">
-				<label for="kecamatan">Kecamatan</label>
-				<select name="kecamatan" id="kecamatan" class="form-control form-control-sm">
-					<option value="">-Pilih-</option>
-					<?php $i = 1; ?>
-					<?php foreach ($dt_kec as $r) : ?>
-						<option value="<?= $r->id_kec ?>"><?= $i++ . '. ' . $r->kecamatan ?></option>
-					<?php endforeach; ?>
-				</select>
-			</div>
-			<div class="form-group">
-				<label for="desa">Desa</label>
-				<select name="desa" id="desa" class="form-control form-control-sm">
-					<?php $i = 1; ?>
-					<?php foreach ($dt_desa as $r) : ?>
-						<option value="<?= $r->id_desa ?>" data-chained="<?= $r->kd_camat ?>"><?= $i++ . '. ' . $r->desa ?></option>
-					<?php endforeach; ?>
-				</select>
-			</div>
-			<div class="form-group">
-				<label for="jenis_kegiatan">Jenis Kegiatan</label>
-				<select name="jenis_kegiatan" id="jenis_kegiatan" class="form-control form-control-sm">
-					<option value="">-Pilih-</option>
-					<option value="Pertanian">1. Pertanian</option>
-					<option value="Peternakan">2. Peternakan</option>
-					<option value="Perkebunan">3. Perkebunan</option>
-					<option value="Perikanan">4. Perikanan</option>
-					<option value="Kelautan">5. Kelautan</option>
-				</select>
-			</div>
-			<div class="form-group">
-				<label for="subkegiatan">Sub Kegiatan</label>
-				<input type="text" class="form-control" name="subkegiatan" id="subkegiatan" placeholder="Sub Kegiatan">
-			</div>
-			<div class="form-group">
-				<label for="tahun">Tahun</label>
-				<select name="tahun" id="tahun" class="form-control form-control-sm">
-					<option value="2022">2022</option>
-					<option value="2023">2023</option>
-				</select>
+			<?= form_open_multipart('SKP/TambahSKP/insert') ?>
+			<div class="row">
+				<div class="col-6">
+					<div class="form-group">
+						<label for="kd_kec">Kecamatan</label>
+						<input type="text" value="<?= masterGetId('kecamatan', 'dt_kecamatan', 'id_kec', $kd_kec) ?>" class="form-control" readonly>
+						<input type="hidden" value="<?= $kd_kec ?>" class="form-control" name="kd_kec" id="kd_kec" readonly>
+					</div>
+					<div class="form-group">
+						<label for="jenis_kegiatan">Jenis Kegiatan</label>
+						<select style="padding-bottom: 26px;" name="jenis_kegiatan" id="jenis_kegiatan" class="form-control form-control-sm">
+							<option value="">-Pilih-</option>
+							<option value="Pertanian">1. Pertanian</option>
+							<option value="Peternakan">2. Peternakan</option>
+							<option value="Perkebunan">3. Perkebunan</option>
+							<option value="Perikanan">4. Perikanan</option>
+							<option value="Kelautan">5. Kelautan</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-group">
+						<label for="kd_desa">Desa</label>
+						<input type="text" value="<?= masterGetId('desa', 'dt_desa', 'id_desa', $kd_desa) ?>" class="form-control" readonly>
+						<input type="hidden" value="<?= $kd_desa ?>" class="form-control" name="kd_desa" id="kd_desa" readonly>
+					</div>
+					<div class="form-group">
+						<label for="subkegiatan">Sub Kegiatan</label>
+						<input type="text" class="form-control" name="subkegiatan" id="subkegiatan" placeholder="Sub Kegiatan">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="tahun">Tahun</label>
+					<select name="tahun" id="tahun" class="form-control form-control-sm">
+						<option value="2022">2022</option>
+						<option value="2023">2023</option>
+					</select>
+				</div>
 			</div>
 			<hr>
 			<div class="card">
@@ -193,4 +190,3 @@
 			<button type="submit" class="btn btn-primary mt-2 float-right">SIMPAN</button>
 		</div>
 	</div>
-</div>
