@@ -44,12 +44,12 @@ class Biodata extends CI_Controller
 
 		if ($cek == 1) {
 			$this->db->update('dt_biodata_surveyor', $data, "kd_desa='$kd_desa'");
-			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">
+			$this->session->set_flashdata('msg', '<div id="alert" class="alert alert-success" role="alert">
 			Data Berhasil Disimpan..!!
 		  </div>');
 			redirect('SKP/Biodata');
 		} else {
-			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">
+			$this->session->set_flashdata('msg', '<div id="alert" class="alert alert-success" role="alert">
 			Data Berhasil Disimpan..!!
 		  </div>');
 			$this->db->insert('dt_biodata_surveyor', $data);

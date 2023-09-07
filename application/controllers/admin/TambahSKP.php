@@ -101,13 +101,13 @@ class TambahSKP extends CI_Controller
 		$insert = $this->m_skp->insert($data);
 		if ($insert) {
 			// Insert berhasil
-			$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">
+			$this->session->set_flashdata('msg', '<div id="alert" class="alert alert-success" role="alert">
 			Data Berhasil Disimpan..!!
 		  </div>');
 			redirect('SKP'); // Ganti 'success' dengan halaman yang sesuai
 		} else {
 			// Insert gagal
-			$this->session->set_flashdata('msg', '<div class="alert alert-danger" role="alert">
+			$this->session->set_flashdata('msg', '<div id="alert" class="alert alert-danger" role="alert">
 			Data Gagal Disimpan..!!
 		  </div>');
 			redirect('SKP'); // Ganti 'error' dengan halaman yang sesuai
