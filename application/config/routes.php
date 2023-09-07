@@ -58,6 +58,7 @@ $route['SKP/detail/(:any)'] = 'admin/SKP/detail/$1';
 $route['SKP/Biodata'] = 'admin/Biodata';
 $route['SKP/TambahSKP'] = 'admin/TambahSKP/index';
 $route['SKP/TambahSKP/insert'] = 'admin/TambahSKP/insert';
+$route['SKP/Export'] = 'admin/SKP/Export';
 $route['Berita'] = 'admin/Berita';
 $route['Berita/Form_Edit/(:any)'] = 'admin/Berita/Form_Edit/$1';
 $route['404_override'] = '';

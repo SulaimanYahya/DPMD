@@ -1,6 +1,9 @@
 <div class="main-panel">
 	<div class="content-wrapper">
-		<div class="col-10 offset-1" style="margin-top: -30px;">
+		<div class="col-10 offset-1" style="margin-top: -10px;">
+			<div class="col-2 offset-10">
+				<a href="<?= base_url('SKP/Export') ?>" target="_blank" class="btn btn-sm btn-success text-decoration-none text-light"> <span class="mdi mdi-file-excel"></span>Export</a>
+			</div>
 			<h5><strong><?= $this->session->flashdata('msg') ?></strong></h5>
 			<div class="card">
 				<div class="card-body">

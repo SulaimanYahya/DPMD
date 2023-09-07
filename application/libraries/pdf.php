@@ -1,13 +1,8 @@
-<?php defined('BASEPATH') or exit('No direct script access allowed');
-// Dompdf namespace use Dompdf\Dompdf;
+<?php
 class Pdf
 {
-    public function __construct()
-    {
-        require_once dirname(__FILE__) . '/dompdf/autoload.inc.php';
-        $pdf = new DOMPDF();
-        $CI = &amp;
-        get_instance();
-        $CI->dompdf = $pdf;
-    }
+	function __construct()
+	{
+		include_once APPPATH . '/third_party/fpdf/fpdf.php';
+	}
 }
