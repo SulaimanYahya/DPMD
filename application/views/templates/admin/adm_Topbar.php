@@ -1,4 +1,5 @@
 <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+	<div id="timer" class="col-4 offset-8 fixed-bottom" style="text-align: right;" data-bs-toggle="tooltip" data-bs-title="Default tooltip"></div>
 	<ul class="navbar-nav mr-lg-4 w-100">
 		<li class="nav-item nav-search d-none d-lg-block w-100">
 			<div class="input-group">
@@ -23,7 +24,7 @@
 				</p>
 				<a class="dropdown-item">
 					<div class="item-thumbnail">
-						<img src="images/faces/face4.jpg" alt="image" class="profile-pic" />
+						<!-- <img src="images/faces/face4.jpg" alt="image" class="profile-pic" /> -->
 					</div>
 					<div class="item-content flex-grow">
 						<h6 class="ellipsis font-weight-normal">David Grey</h6>
@@ -34,7 +35,7 @@
 				</a>
 				<a class="dropdown-item">
 					<div class="item-thumbnail">
-						<img src="images/faces/face2.jpg" alt="image" class="profile-pic" />
+						<!-- <img src="images/faces/face2.jpg" alt="image" class="profile-pic" /> -->
 					</div>
 					<div class="item-content flex-grow">
 						<h6 class="ellipsis font-weight-normal">Tim Cook</h6>
@@ -45,7 +46,7 @@
 				</a>
 				<a class="dropdown-item">
 					<div class="item-thumbnail">
-						<img src="images/faces/face3.jpg" alt="image" class="profile-pic" />
+						<!-- <img src="images/faces/face3.jpg" alt="image" class="profile-pic" /> -->
 					</div>
 					<div class="item-content flex-grow">
 						<h6 class="ellipsis font-weight-normal">Johnson</h6>
@@ -108,7 +109,7 @@
 		</li>
 		<li class="nav-item nav-profile dropdown">
 			<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
-				<img src="images/faces/face5.jpg" alt="profile" />
+				<!-- <img src="images/faces/face5.jpg" alt="profile" /> -->
 				<span class="nav-profile-name">Louis Barnett</span>
 			</a>
 			<div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">

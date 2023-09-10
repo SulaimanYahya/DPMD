@@ -50,6 +50,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'Dashboard';
+$route['SKP/ErrorPage/(:any)'] = 'ErrorPage/index/$1';
 $route['Auth'] = 'Auth';
 $route['Admin'] = 'admin/Admin';
 $route['Biodata/insert'] = 'admin/Biodata/insert';

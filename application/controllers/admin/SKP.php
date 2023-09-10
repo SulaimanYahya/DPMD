@@ -43,6 +43,8 @@ class SKP extends CI_Controller
 		// error_reporting(0); // AGAR ERROR MASALAH VERSI PHP TIDAK MUNCUL
 		$pdf = new FPDF('P', 'mm', 'Letter');
 		$pdf->AddPage();
+		$pdf->SetAutoPageBreak(FALSE);
+
 		$pdf->Image(base_url('uploads/BonBol.jpg'), 10, 6, 20);
 		// Arial bold 15
 		$pdf->SetFont('Arial', 'B', 15);
@@ -174,13 +176,12 @@ class SKP extends CI_Controller
 		$pdf->Cell(170, 6, 'Terdapat Bukti tindak lanjut kegiatan tahun lalu sampai dengan sekarang masih berjalan.', 1, 0);
 		$pdf->Cell(20, 6, $r['C3'], 1, 0, 'C');
 
-
 		// Go to 1.5 cm from bottom
 		$pdf->SetY(245);
 		// Select Arial italic 8
 		$pdf->SetFont('Arial', 'I', 8);
 		// Print centered page number
-		$pdf->Cell(0, 10, 'Printed By: desa.bonebolangokab.go.id || ' . date('d/m/Y') . ' || ' . date('H:i:s'), 0, 0, 'R');
+		$pdf->Cell(0, 50, 'Printed By: desa.bonebolangokab.go.id || ' . date('d/m/Y') . ' || ' . date('H:i:s'), 0, 0, 'R');
 		$pdf->Output();
 	}
 }
