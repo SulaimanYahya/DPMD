@@ -109,17 +109,23 @@
 		</li>
 		<li class="nav-item nav-profile dropdown">
 			<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
-				<!-- <img src="images/faces/face5.jpg" alt="profile" /> -->
-				<span class="nav-profile-name">Louis Barnett</span>
+				<?php $img = '';
+				if (getUserData('image') == NULL || '') {
+					$img = 'default.png';
+				} else {
+					$img = getUserData('image');
+				} ?>
+				<img src="<?= base_url("assets/admin/images/profile/$img") ?>" alt="profile" />
+				<span class="nav-profile-name"><?= $this->session->userdata('name') ?></span>
 			</a>
 			<div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-				<a class="dropdown-item">
+				<a href="<?= base_url('Profile') ?>" class="dropdown-item">
 					<i class="mdi mdi-settings text-primary"></i>
-					Settings
+					Pengaturan
 				</a>
 				<a href="<?= base_url('Auth/logout') ?>" class="dropdown-item">
 					<i class="mdi mdi-logout text-primary"></i>
-					Logout
+					Keluar
 				</a>
 			</div>
 		</li>

@@ -16,7 +16,7 @@
 	<!-- inject:css -->
 	<link rel="stylesheet" href="<?= base_url() ?>assets/admin/css/style.css" />
 	<!-- endinject -->
-	<link rel="shortcut icon" href="<?= base_url() ?>assets/admin/images/favicon.png" />
+	<link rel="shortcut icon" href="<?= base_url() ?>assets/admin/images/bonebol.png" />
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" crossorigin="anonymous" />
 

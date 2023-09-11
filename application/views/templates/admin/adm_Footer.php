@@ -2,7 +2,7 @@
 <footer class="footer">
 	<div class="d-sm-flex justify-content-center justify-content-sm-between">
 		<span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright ©
-			<a href="<?= base_url() ?>" target="_blank">Dinas Pemberdayaan Masyrakat dan Desa </a> || 2023</span>
+			<a href="<?= base_url('Admin') ?>" target="_blank">Dinas Pemberdayaan Masyrakat dan Desa </a> || 2023</span>
 		<span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Contact Admin
 			<a href="https://wa.me/+6281343931767" target="_blank"> <span class="mdi mdi-whatsapp"></span> WhatsApp</a>
 		</span>
@@ -15,9 +15,9 @@
 <!-- page-body-wrapper ends -->
 </div>
 <!-- container-scroller -->
-
 <!-- plugins:js -->
 <script src="<?= base_url() ?>assets/admin/vendors/base/vendor.bundle.base.js"></script>
+
 <!-- endinject -->
 <!-- Plugin js for this page-->
 <script src="<?= base_url() ?>assets/admin/vendors/chart.js/Chart.min.js"></script>
@@ -38,11 +38,11 @@
 
 <script src="<?= base_url() ?>assets/admin/js/jquery.cookie.js" type="text/javascript"></script>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> -->
 
 <script type="text/javascript">
 	setTimeout(function() {
@@ -69,7 +69,6 @@
 			if (window.location.href == "<?= base_url('SKP/TambahSKP') ?>") {
 				window.location.href = "ErrorPage/403";
 			}
-
 		} else {
 			const hari = Math.floor(selisih / (1000 * 60 * 60 * 24));
 			const jam = Math.floor((selisih % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

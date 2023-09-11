@@ -62,5 +62,7 @@ $route['SKP/TambahSKP/insert'] = 'admin/TambahSKP/insert';
 $route['SKP/Export'] = 'admin/SKP/Export';
 $route['Berita'] = 'admin/Berita';
 $route['Berita/Form_Edit/(:any)'] = 'admin/Berita/Form_Edit/$1';
+$route['Profile'] = 'admin/Profile/index';
+$route['Profile/Edit/(:any)'] = 'admin/Profile/edit/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

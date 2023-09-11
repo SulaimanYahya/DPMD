@@ -42,6 +42,7 @@ class Auth extends CI_Controller
 				// cek password
 				if ($password == $user['password']) {
 					$data = [
+						'id'	  => enkrip($user['id']),
 						'name' 	  => $user['name'],
 						'role_id' => $user['role_id'],
 						'kd_desa' => $user['kd_desa'],
@@ -191,6 +192,7 @@ class Auth extends CI_Controller
 	public function logout()
 	{
 		// $this->session->unset_userdata('email');
+		$this->session->unset_userdata('id');
 		$this->session->unset_userdata('name');
 		$this->session->unset_userdata('role_id');
 		$this->session->unset_userdata('kd_kec');

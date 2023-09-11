@@ -17,8 +17,8 @@
 
 	<!-- inject:css -->
 	<link rel="stylesheet" href="<?= base_url('') ?>assets/public/css/style.css" />
-	<!-- endinject -->
 </head>
+<!-- endinject -->
 
 <body>
 	<div class="container-scroller">

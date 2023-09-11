@@ -14,7 +14,7 @@
 					</div>
 					<div class="form-group">
 						<label for="jenis_kegiatan">Jenis Kegiatan</label>
-						<select style="padding-bottom: 26px;" name="jenis_kegiatan" id="jenis_kegiatan" class="form-control form-control-sm">
+						<select style="padding-bottom: 12px;" name="jenis_kegiatan" id="jenis_kegiatan" class="form-control form-control-sm">
 							<option value="">-Pilih-</option>
 							<option value="Pertanian">1. Pertanian</option>
 							<option value="Peternakan">2. Peternakan</option>

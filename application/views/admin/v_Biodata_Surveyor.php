@@ -36,7 +36,7 @@
 								</div>
 								<div class="form-group">
 									<label for="Jenkel">Jenkel</label>
-									<select class="form-control form-control-sm" style="padding-bottom: 27px;" name="jenkel" id="jenkel">
+									<select class="form-control form-control-sm" style="padding-bottom: 12px;" name="jenkel" id="jenkel">
 										<?php if ($biodata['jenkel'] == 'Laki-laki') {
 											echo "
 											<option value=''>-Pilih-</option>
