@@ -34,6 +34,9 @@ class TambahSKP extends CI_Controller
 		$foto_A1 = $_FILES['foto_A1']['name'];
 		$foto_A2 = $_FILES['foto_A2']['name'];
 		$foto_A3 = $_FILES['foto_A3']['name'];
+		$foto_A4 = $_FILES['foto_A4']['name'];
+		$foto_A5 = $_FILES['foto_A5']['name'];
+		$foto_A6 = $_FILES['foto_A6']['name'];
 		$foto_B1 = $_FILES['foto_B1']['name'];
 		$foto_B2 = $_FILES['foto_B2']['name'];
 		$foto_B3 = $_FILES['foto_B3']['name'];
@@ -51,6 +54,9 @@ class TambahSKP extends CI_Controller
 		$this->upload->do_upload('foto_A1');
 		$this->upload->do_upload('foto_A2');
 		$this->upload->do_upload('foto_A3');
+		$this->upload->do_upload('foto_A4');
+		$this->upload->do_upload('foto_A5');
+		$this->upload->do_upload('foto_A6');
 		$this->upload->do_upload('foto_B1');
 		$this->upload->do_upload('foto_B2');
 		$this->upload->do_upload('foto_B3');
@@ -87,6 +93,9 @@ class TambahSKP extends CI_Controller
 			'foto_A1' 		 => $foto_A1,
 			'foto_A2' 		 => $foto_A2,
 			'foto_A3' 		 => $foto_A3,
+			'foto_A4' 		 => $foto_A4,
+			'foto_A5' 		 => $foto_A5,
+			'foto_A6' 		 => $foto_A6,
 			'foto_B1' 		 => $foto_B1,
 			'foto_B2' 		 => $foto_B2,
 			'foto_B3' 		 => $foto_B3,
