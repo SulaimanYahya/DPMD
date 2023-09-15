@@ -11415,4 +11415,28 @@ footer .footer-bottom {
 	outline: 0;
 }
 
-/*# sourceMappingURL=maps/style.css.map */
+.my-custom-scrollbar {
+	position: relative;
+	height: 320px;
+	overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+	display: block;
+}
+
+/* Sembunyikan scrollbar vertikal */
+::-webkit-scrollbar {
+	width: 0.5em; /* Anda bisa mengganti ini sesuai keinginan */
+}
+
+/* Gaya thumb scrollbar */
+::-webkit-scrollbar-thumb {
+	background-color: #888; /* Warna thumb scrollbar */
+	border-radius: 4px; /* Bentuk thumb scrollbar */
+}
+
+/* Gaya track scrollbar */
+::-webkit-scrollbar-track {
+	background-color: #f1f1f1; /* Warna track scrollbar */
+}

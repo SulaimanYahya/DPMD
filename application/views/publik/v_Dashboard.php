@@ -22,42 +22,26 @@
 			<div class="col-xl-4 stretch-card grid-margin">
 				<div class="card bg-dark text-white">
 					<div class="card-body">
-						<h2>Latest news</h2>
+						<h4>Yang sudah melakukan penginputan</h4>
+						<div class="table-wrapper-scroll-y my-custom-scrollbar">
+							<?php foreach ($skp as $r) : ?>
+								<div class="d-flex border-bottom-blue pt-3 pb-4 align-items-center justify-content-between">
+									<div class="pr-3">
+										<h5><?= $r->jenis_kegiatan ?></h5>
+										<div class="fs-12">
+											<span class="mr-2"><?= masterGetId('desa', 'dt_desa', 'id_desa', $r->kd_desa) ?> </span> | &nbsp;<?= $r->tahun ?>
+										</div>
+									</div>
 
-						<div class="d-flex border-bottom-blue pt-3 pb-4 align-items-center justify-content-between">
-							<div class="pr-3">
-								<h5>Virus Kills Member Of Advising Iran’s Supreme</h5>
-								<div class="fs-12">
-									<span class="mr-2">Photo </span>10 Minutes ago
+									<div class="rotate-img">
+										<?php if ($r->foto_B5 == '' || NULL) { ?>
+											<img src="<?= base_url('uploads/noimage.png') ?>" alt="thumb" class="img-fluid img-lg" style='width: 60px; height: 60px;' />
+										<?php } else { ?>
+											<img src="<?= base_url('uploads/' . $r->foto_B5) ?>" alt="thumb" class="img-fluid img-lg" style='width: 60px; height: 60px;' />
+										<?php } ?>
+									</div>
 								</div>
-							</div>
-							<div class="rotate-img">
-								<img src="<?= base_url() ?>assets/public/images/dashboard/home_1.jpg" alt="thumb" class="img-fluid img-lg" />
-							</div>
-						</div>
-
-						<div class="d-flex border-bottom-blue pb-4 pt-4 align-items-center justify-content-between">
-							<div class="pr-3">
-								<h5>Virus Kills Member Of Advising Iran’s Supreme</h5>
-								<div class="fs-12">
-									<span class="mr-2">Photo </span>10 Minutes ago
-								</div>
-							</div>
-							<div class="rotate-img">
-								<img src="assets/public/images/dashboard/home_2.jpg" alt="thumb" class="img-fluid img-lg" />
-							</div>
-						</div>
-
-						<div class="d-flex pt-4 align-items-center justify-content-between">
-							<div class="pr-3">
-								<h5>Virus Kills Member Of Advising Iran’s Supreme</h5>
-								<div class="fs-12">
-									<span class="mr-2">Photo </span>10 Minutes ago
-								</div>
-							</div>
-							<div class="rotate-img">
-								<img src="assets/public/images/dashboard/home_3.jpg" alt="thumb" class="img-fluid img-lg" />
-							</div>
+							<?php endforeach; ?>
 						</div>
 					</div>
 				</div>
@@ -79,81 +63,37 @@
 			<div class="col-lg-9 stretch-card grid-margin">
 				<div class="card">
 					<div class="card-body">
-						<div class="row">
-							<div class="col-sm-4 grid-margin">
-								<div class="position-relative">
-									<div class="rotate-img">
-										<img src="assets/public/images/dashboard/home_4.jpg" alt="thumb" class="img-fluid" />
-									</div>
-									<div class="badge-positioned">
-										<span class="badge badge-danger font-weight-bold">Flash news</span>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-8 grid-margin">
-								<h2 class="mb-2 font-weight-600">
-									South Korea’s Moon Jae-in sworn in vowing to address
-									North
-								</h2>
-								<div class="fs-13 mb-2">
-									<span class="mr-2">Photo </span>10 Minutes ago
-								</div>
-								<p class="mb-0">
-									Lorem Ipsum has been the industry's standard dummy
-									text ever since the 1500s, when an
-								</p>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-sm-4 grid-margin">
-								<div class="position-relative">
-									<div class="rotate-img">
-										<img src="assets/public/images/dashboard/home_5.jpg" alt="thumb" class="img-fluid" />
-									</div>
-									<div class="badge-positioned">
-										<span class="badge badge-danger font-weight-bold">Flash news</span>
+						<?php foreach ($skp as $r) : ?>
+							<div class="row">
+								<div class="col-sm-4 grid-margin">
+									<div class="position-relative">
+										<div class="rotate-img">
+											<?php if ($r->foto_B5 == '' || NULL) { ?>
+												<img src="<?= base_url('uploads/noimage.png') ?>" alt="thumb" class="img-fluid" />
+											<?php } else { ?>
+												<img src="<?= base_url('uploads/' . $r->foto_B5) ?>" alt="thumb" class="img-fluid" />
+											<?php } ?>
+										</div>
+										<div class="badge-positioned">
+											<span class="badge badge-danger font-weight-bold">Flash news</span>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-sm-8 grid-margin">
-								<h2 class="mb-2 font-weight-600">
-									No charges over 2017 Conservative battle bus cases
-								</h2>
-								<div class="fs-13 mb-2">
-									<span class="mr-2">Photo </span>10 Minutes ago
-								</div>
-								<p class="mb-0">
-									Lorem Ipsum has been the industry's standard dummy
-									text ever since the 1500s, when an
-								</p>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-sm-4">
-								<div class="position-relative">
-									<div class="rotate-img">
-										<img src="assets/public/images/dashboard/home_6.jpg" alt="thumb" class="img-fluid" />
+								<div class="col-sm-8 grid-margin">
+									<h2 class="mb-2 font-weight-600">
+										South Korea’s Moon Jae-in sworn in vowing to address
+										North
+									</h2>
+									<div class="fs-13 mb-2">
+										<span class="mr-2">Photo </span>10 Minutes ago
 									</div>
-									<div class="badge-positioned">
-										<span class="badge badge-danger font-weight-bold">Flash news</span>
-									</div>
+									<p class="mb-0">
+										Lorem Ipsum has been the industry's standard dummy
+										text ever since the 1500s, when an
+									</p>
 								</div>
 							</div>
-							<div class="col-sm-8">
-								<h2 class="mb-2 font-weight-600">
-									Kaine: Trump Jr. may have committed treason
-								</h2>
-								<div class="fs-13 mb-2">
-									<span class="mr-2">Photo </span>10 Minutes ago
-								</div>
-								<p class="mb-0">
-									Lorem Ipsum has been the industry's standard dummy
-									text ever since the 1500s, when an
-								</p>
-							</div>
-						</div>
+						<?php endforeach; ?>
 					</div>
 				</div>
 			</div>

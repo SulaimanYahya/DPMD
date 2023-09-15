@@ -11,7 +11,8 @@ class Dashboard extends CI_Controller
 	public function index()
 	{
 		$data = [
-			'dt_kec'    => $this->m_kec->getDatawilayah('dt_kecamatan', 'kecamatan')
+			'dt_kec'  => $this->m_kec->getDatawilayah('dt_kecamatan', 'kecamatan'),
+			'skp'     => $this->db->get('dt_skp')->result(),
 		];
 		$this->template->load('publik/v_Dashboard', $data);
 	}
