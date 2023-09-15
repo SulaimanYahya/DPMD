@@ -17,7 +17,7 @@
 								<th>Jenis Kegiatan</th>
 								<th>Sub Kegiatan</th>
 								<th>Tahun</th>
-								<th>Detail</th>
+								<th>Aksi</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -31,8 +31,11 @@
 									<td><?= $r->sub_kegiatan ?></td>
 									<td><?= $r->tahun ?></td>
 									<td>
-										<a href="<?= base_url('SKP/detail/') . enkrip($r->id) ?>" data-toggle="tooltip" title="Detail">
+										<a href="<?= base_url('SKP/detail/') . enkrip($r->id) ?>" data-toggle="tooltip" title="Detail" class="text-decoration-none">
 											<span class="mdi mdi-eye-circle" style="font-size: 20px;"></span>
+										</a>
+										<a href="<?= base_url('SKP/delete/') . enkrip($r->id) ?>" data-toggle="tooltip" title="Hapus" class="text-danger text-decoration-none">
+											<span class="mdi mdi-delete" style="font-size: 20px;"></span>
 										</a>
 									</td>
 								</tr>

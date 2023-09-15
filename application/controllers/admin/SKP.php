@@ -31,6 +31,13 @@ class SKP extends CI_Controller
 		$this->template->admin('admin/v_DetailSKP', $data);
 	}
 
+	function delete($idx)
+	{
+		$id = dekrip($idx);
+		$this->db->delete('dt_skp', ['id' => $id]);
+		return redirect('SKP');
+	}
+
 	function Export()
 	{
 		$kd_desa = $this->session->userdata('kd_desa');

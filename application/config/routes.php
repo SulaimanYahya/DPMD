@@ -56,6 +56,7 @@ $route['Admin'] = 'admin/Admin';
 $route['Biodata/insert'] = 'admin/Biodata/insert';
 $route['SKP'] = 'admin/SKP/index';
 $route['SKP/detail/(:any)'] = 'admin/SKP/detail/$1';
+$route['SKP/delete/(:any)'] = 'admin/SKP/delete/$1';
 $route['SKP/Biodata'] = 'admin/Biodata';
 $route['SKP/TambahSKP'] = 'admin/TambahSKP/index';
 $route['SKP/TambahSKP/insert'] = 'admin/TambahSKP/insert';
